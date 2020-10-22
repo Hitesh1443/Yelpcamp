@@ -16,7 +16,7 @@ const commentRoutes = require("./routes/comments"),
   indexRoutes = require("./routes/index");
 
 mongoose.Promise = require("bluebird");
-mongoose.connect("mongodb://localhost/yelpcamp", { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
+mongoose.connect(process.env.MONGO_ATLAS || "mongodb://localhost/yelpcamp", { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");

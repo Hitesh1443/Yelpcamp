@@ -76,7 +76,6 @@ body {
   }
 }
 
-/* Older browser support - class added by modernizr */
 .no-cssanimations .slideshow li {
   opacity: 1;
 }
